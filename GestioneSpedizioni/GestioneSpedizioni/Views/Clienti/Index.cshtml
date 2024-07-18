@@ -1,0 +1,44 @@
+﻿@model IEnumerable<GestioneSpedizioni.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Elenco Clienti";
+}
+
+<h1>Elenco Clienti</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Codice Fiscale</th>
+            <th>Ragione Sociale</th>
+            <th>Partita IVA</th>
+            <th>Email</th>
+            <th>Telefono</th>
+            <th>Indirizzo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cliente in Model)
+        {
+            <tr>
+                <td>@cliente.Nome</td>
+                <td>@cliente.Cognome</td>
+                <td>@cliente.CodiceFiscale</td>
+                <td>@cliente.RagioneSociale</td>
+                <td>@cliente.PartitaIVA</td>
+                <td>@cliente.Email</td>
+                <td>@cliente.Telefono</td>
+                <td>@cliente.Indirizzo</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@cliente.Id">Modifica</a> |
+                    <a asp-action="Details" asp-route-id="@cliente.Id">Dettagli</a> |
+                    <a asp-action="Delete" asp-route-id="@cliente.Id">Elimina</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-action="Create" class="btn btn-primary">Aggiungi Cliente</a>
