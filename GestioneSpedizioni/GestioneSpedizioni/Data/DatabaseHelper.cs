@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient; // Assicurati di utilizzare il namespace corretto
 
 public class DatabaseHelper
 {

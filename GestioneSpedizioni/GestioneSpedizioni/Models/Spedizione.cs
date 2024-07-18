@@ -1,4 +1,6 @@
-﻿namespace GestioneSpedizioni.Models
+﻿using System;
+
+namespace GestioneSpedizioni.Models
 {
     public class Spedizione
     {

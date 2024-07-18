@@ -1,6 +1,8 @@
 using System.Diagnostics;
+using System.Diagnostics;
 using GestioneSpedizioni.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging; // Aggiungi questo namespace
 
 namespace GestioneSpedizioni.Controllers
 {
