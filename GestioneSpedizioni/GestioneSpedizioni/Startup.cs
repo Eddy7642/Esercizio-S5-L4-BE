@@ -16,7 +16,6 @@ public class Startup
 
     public IConfiguration Configuration { get; }
 
-    // Questo metodo viene chiamato dal runtime. Usa questo metodo per aggiungere servizi al contenitore.
     public void ConfigureServices(IServiceCollection services)
     {
         // Configura il DbContext per l'utilizzo di SQL Server
@@ -34,13 +33,11 @@ public class Startup
         services.AddRazorPages();
     }
 
-    // Questo metodo viene chiamato dal runtime. Usa questo metodo per configurare la pipeline delle richieste HTTP.
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         if (env.IsDevelopment())
         {
             app.UseDeveloperExceptionPage();
-            app.UseDatabaseErrorPage();
         }
         else
         {
